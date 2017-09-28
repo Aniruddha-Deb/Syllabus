@@ -1,5 +1,6 @@
 package com.syllabus.core.data.duration;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +16,24 @@ public class Term {
 		this.name = name;
 		this.exams = new ArrayList<>();
 		this.days = new ArrayList<>();
+	}
+	
+	public Term( String name, LocalDate start, LocalDate end ) {
+		this.name = name;
+		this.exams = new ArrayList<>();
+		// TODO populate the day list.
+		this.days = new ArrayList<>();
 	}	
 	
-	@Override
-	public String toString(){
-		return name;
+	public List<Exam> getExams(){
+		return exams;
 	}
+	
+	public List<Day> getDays(){
+		return days;
+	}
+	
+	public String getName(){
+		return name;
+	}	
 }

@@ -1,7 +1,6 @@
 package com.syllabus.core.data.duration;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class AcademicYear {
@@ -9,9 +8,9 @@ public class AcademicYear {
 	private List<Term> terms = null;
 	private String name = null;
 
-	public AcademicYear( String name, Term... terms ) {
+	public AcademicYear( String name, List<Term> terms ) {
 		this.name = name;
-		this.terms = Arrays.asList( terms );	
+		this.terms = terms;	
 	}
 	
 	public AcademicYear( String name ) {
@@ -23,8 +22,12 @@ public class AcademicYear {
 		return terms;
 	}
 	
+	public String getName(){
+		return name;
+	}
+	
 	@Override
 	public String toString(){
-		return name;
-	}	
+		return name + " : " + terms.toString();
+	}
 }
