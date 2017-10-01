@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.syllabus.core.data.duration.AcademicYear;
-import com.syllabus.core.data.duration.Term;
+import com.syllabus.core.data.duration.term.Term;
 
 public class DataTest {
 	
@@ -26,13 +26,14 @@ public class DataTest {
 
 	@Before
 	public void setUp() throws Exception {
-		term1 = new Term( "Term1", term1StartDate, term1EndDate );
-		term2 = new Term( "Term2", term2StartDate, term2EndDate );
+//		term1 = new Term( "Term1", term1StartDate, term1EndDate );
+//		term2 = new Term( "Term2", term2StartDate, term2EndDate );
 		year = new AcademicYear( "2017", Arrays.asList( new Term[]{
 			term1, term2	
 		}) );
 	}
 
+	// TESTS WILL FAIL NOW
 	@Test
 	public void yearTest() {
 		assertThat( year.getName(), is(equalTo( "2017" ) ) );

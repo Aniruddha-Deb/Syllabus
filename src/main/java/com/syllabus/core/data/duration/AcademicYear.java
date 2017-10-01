@@ -3,6 +3,8 @@ package com.syllabus.core.data.duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.syllabus.core.data.duration.term.Term;
+
 public class AcademicYear {
 
 	private List<Term> terms = null;

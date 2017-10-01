@@ -1,9 +1,9 @@
-package com.syllabus.core.data.duration;
+package com.syllabus.core.data.duration.term;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.syllabus.core.data.duration.Day;
 import com.syllabus.core.data.study.Exam;
 
 public class Term {
@@ -12,17 +12,16 @@ public class Term {
 	private List<Day> days = null;
 	private String name = null;
 		
-	public Term( String name ) {
+	Term( String name ) {
 		this.name = name;
 		this.exams = new ArrayList<>();
 		this.days = new ArrayList<>();
 	}
 	
-	public Term( String name, LocalDate start, LocalDate end ) {
+	Term( String name, List<Day> days ) {
 		this.name = name;
 		this.exams = new ArrayList<>();
-		// TODO populate the day list.
-		this.days = new ArrayList<>();
+		this.days = days;
 	}	
 	
 	public List<Exam> getExams(){
