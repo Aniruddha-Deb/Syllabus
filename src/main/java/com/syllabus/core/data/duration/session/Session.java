@@ -10,11 +10,18 @@ public abstract class Session {
 	protected List<Period> periods = null;
 	protected Duration totalDuration = null;
 	
-	protected Session( List<Period> periods, Duration totDuration ) {
+	protected Session( List<Period> periods ) {
 		this.periods = periods;
-		this.totalDuration = totDuration;
+		computeTotalDuration();
 	}
 	
+	private void computeTotalDuration(){
+		totalDuration = Duration.ZERO;
+		for( Period p : periods ) {
+			totalDuration = totalDuration.plus( p.getDuration() );
+		}
+	}
+
 	public List<Period> getPeriods(){
 		return periods;
 	}

@@ -1,6 +1,5 @@
 package com.syllabus.core.data.duration.session;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +10,13 @@ public class SchoolSession extends Session {
 
 	private List<Exam> exams = null;
 	
-	public SchoolSession( List<Period> periods, Duration totDuration ) {
-		super( periods, totDuration );
+	public SchoolSession( List<Period> periods ) {
+		super( periods );
 		exams = new ArrayList<>();
 	}
 	
-	public SchoolSession( List<Period> periods, List<Exam> exams, Duration totDuration ) {
-		super( periods, totDuration );
+	public SchoolSession( List<Period> periods, List<Exam> exams ) {
+		super( periods );
 		this.exams = exams;
 	}
 	
