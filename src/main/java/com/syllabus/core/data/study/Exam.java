@@ -1,9 +1,13 @@
 package com.syllabus.core.data.study;
 
+import java.io.Serializable;
+
 import com.syllabus.core.data.duration.Day;
 
-public class Exam {
+public class Exam implements Serializable {
 
+	private static final long serialVersionUID = 2994973038121301008L;
+	
 	private Syllabus syllabus = null;
 	private Day day = null;
 	private Subject subject = null;

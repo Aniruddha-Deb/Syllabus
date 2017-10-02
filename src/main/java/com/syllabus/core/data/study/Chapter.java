@@ -1,7 +1,11 @@
 package com.syllabus.core.data.study;
 
-public class Chapter {
+import java.io.Serializable;
 
+public class Chapter implements Serializable{
+
+	private static final long serialVersionUID = 4356553589731185431L;
+	
 	private String name = null;
 	private int numParts = -1;
 	private double schoolProgress = -1;

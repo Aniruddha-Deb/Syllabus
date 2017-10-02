@@ -8,6 +8,8 @@ import com.syllabus.core.data.study.Exam;
 
 public class SchoolSession extends Session {
 
+	private static final long serialVersionUID = -357053736521627172L;
+	
 	private List<Exam> exams = null;
 	
 	public SchoolSession( List<Period> periods ) {

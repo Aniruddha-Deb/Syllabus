@@ -1,12 +1,15 @@
 package com.syllabus.core.data.duration;
 
+import java.io.Serializable;
 import java.time.Duration;
 
 import com.syllabus.core.data.study.Chapter;
 import com.syllabus.core.data.study.Subject;
 
-public class Period {
+public class Period implements Serializable {
 
+	private static final long serialVersionUID = -4576761256652339947L;
+	
 	private Chapter chapter = null;
 	private Subject subject = null;
 	private Duration duration = null;

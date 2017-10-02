@@ -1,13 +1,16 @@
 package com.syllabus.core.data.duration.term;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.syllabus.core.data.duration.Week;
 import com.syllabus.core.data.study.Exam;
 
-public class Term {
+public class Term implements Serializable {
 
+	private static final long serialVersionUID = -6457837405162856566L;
+	
 	private List<Exam> exams = null;
 	private List<Week> weeks = null;
 	private String name = null;

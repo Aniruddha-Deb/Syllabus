@@ -1,7 +1,11 @@
 package com.syllabus.core.data.study;
 
-public class Subject {
+import java.io.Serializable;
 
+public class Subject implements Serializable {
+
+	private static final long serialVersionUID = 8155806517311771100L;
+	
 	private String name = null;
 	
 	public Subject( String name ) {

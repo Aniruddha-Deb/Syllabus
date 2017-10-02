@@ -1,5 +1,6 @@
 package com.syllabus.core.data.duration;
 
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,8 +9,10 @@ import java.util.List;
 import com.syllabus.core.data.duration.session.Session;
 import com.syllabus.core.data.study.Exam;
 
-public class Day {
+public class Day implements Serializable{
 
+	private static final long serialVersionUID = 683318425238531506L;
+	
 	private LocalDate date = null;
 	private DayOfWeek dayOfWeek = null;
 	private List<Session> sessions = null;
