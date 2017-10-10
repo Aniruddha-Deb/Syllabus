@@ -1,0 +1,22 @@
+{
+  "name": "syllabus",
+  "version": "0.1.0",
+  "description": "Syllabus management system",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aniruddha-Deb/Syllabus.git"
+  },
+  "keywords": [
+    "syllabus"
+  ],
+  "author": "Aniruddha-Deb",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Aniruddha-Deb/Syllabus/issues"
+  },
+  "homepage": "https://github.com/Aniruddha-Deb/Syllabus#readme"
+}
