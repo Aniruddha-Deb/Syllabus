@@ -1,23 +1,17 @@
 var express = require( "express" );
-var mongoose = require( "mongoose" );
 var app = express();
 
-mongoose.connect( "mongodb://localhost/Syllabus" );
-var db = mongoose.connection;
+var Item = require( "./item" );
 
-var Document = require( "./Document" );
-
-var doc = new Document();
-var item1 = new Document.Item( "Apple" );
-var item2 = new Document.Item( "Banana" );
-doc.addItem( item1 );
-doc.addItem( item2 );
-
-doc.removeItem( item1 );
-doc.save();
+var root = new Item( "CEO" );
+var CTO = new Item( "CTO" );
+root.addItem( root, CTO );
+root.addItem( root, new Item( "CFO" ) );
+root.addItem( root, new Item( "COO" ) );
+root.removeItem( root, CTO );
 
 app.get( "/", ( req, res ) => {
-    res.send( "<html><body>" + Document.find( {name: } ) + "</body></html>" );
+    res.send( "<html><body>" + JSON.stringify( root ) + "</body></html>" );
 } );
 
 app.listen( 8080 );
