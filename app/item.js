@@ -18,7 +18,8 @@ Item.prototype.removeItem = function( parent, item ) {
 Item.prototype.preOrder = function( item, fn ) {
     if( item ) {
         if( fn ) {
-            fn( item );            
+            fn( item );      
+            return;      
         }
         else {
             for( i=0; i<item.subItems.length; i++ ) {
