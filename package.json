@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/main.js ."
+    "start": "node app/server.js ."
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Aniruddha-Deb/Syllabus#readme",
   "dependencies": {
-    "express": "^4.00.0",
+    "express": "^4.8.0",
     "mongodb": "^2.2.31"
   }
 }
