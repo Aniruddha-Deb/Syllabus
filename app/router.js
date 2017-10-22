@@ -17,9 +17,10 @@ module.exports.pageRouter = pageRouter;
 var apiRouter = express.Router();
 
 apiRouter.post( "/login", function( req, res ) {
-    console.log( req.body.emailId );
-    console.log( req.body.password );
-    res.redirect( "/www/register.html" );
+    // TODO write login logic
+} );
+
+apiRouter.post( "/register", function( req, res ) {
 } );
 
 module.exports.apiRouter = apiRouter;
